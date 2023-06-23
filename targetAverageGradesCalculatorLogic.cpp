@@ -23,7 +23,7 @@ int strToInt(char* input)
 
 int gradeCount = 0;
 int sum = 0;
-float getAverage(char* input)
+void getAverageData(char* input)
 {
     int grade = 0;
 
@@ -36,11 +36,9 @@ float getAverage(char* input)
 
         num = strtok(NULL, " ");
     }
-
-    return (float) sum / gradeCount;
 }
 
-void getResults(float targetAverage, int grade, float newSum, int newGradeCount)
+void getResults(float targetAverage, int grade, int newSum, int newGradeCount)
 {
     float average = (float) newSum / newGradeCount;
     if (average >= targetAverage)
@@ -70,7 +68,7 @@ int main()
     std::cout << "Input your grades: ";
     std::cin.getline(input, MAX);
 
-    float average = getAverage(input);
+    getAverageData(input);
     float targetAverage;
     std::cout<<"Input your target average: ";
     std::cin >> targetAverage;
