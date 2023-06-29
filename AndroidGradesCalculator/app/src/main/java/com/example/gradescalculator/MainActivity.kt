@@ -3,6 +3,7 @@ package com.example.gradescalculator
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.StringTokenizer
 
@@ -17,10 +18,14 @@ class MainActivity : AppCompatActivity() {
         val calculateButton = findViewById<Button>(R.id.calculateButton)
 
         calculateButton.setOnClickListener {
+            //check validity of input first:
             if (!validInput(currentGradesText.text.toString())) {
-                currentGradesText.text = "Please input valid grades!"
+                Toast.makeText(this, "Input valid grades!", Toast.LENGTH_LONG).show()
             }
-            else {
+            else if (targetAverageText.text.isEmpty()){
+                Toast.makeText(this, "Input a target average!", Toast.LENGTH_LONG).show()
+            }
+            else { //for valid input:
                 getAverageData(currentGradesText.text.toString())
 
                 val targetAverage = targetAverageText.text.toString().toFloat() - 0.5f //-0.5 to get the minimum average needed
