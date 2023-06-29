@@ -6,6 +6,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.StringTokenizer
+import java.lang.Math.round
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,12 +29,20 @@ class MainActivity : AppCompatActivity() {
             else { //for valid input:
                 getAverageData(currentGradesText.text.toString())
 
-                val targetAverage = targetAverageText.text.toString().toFloat() - 0.5f //-0.5 to get the minimum average needed
-                neededGrades.clear() //clear grades array to make sure you can calculate from scratch again
+                var targetAverage = targetAverageText.text.toString().toFloat()
+                //if target average is already = average
+                if (targetAverage.toInt() == Math.round(sum / gradeCount.toFloat())){
+                    neededGradesText.text = "Your average is already ${targetAverage.toInt()}."
+                }
+                else {
+                    targetAverage -= 0.5f //-0.5 to get the minimum average needed
 
-                getGrades(targetAverage, minGrade, sum, gradeCount)
+                    neededGrades.clear() //clear grades array to make sure you can calculate from scratch again
 
-                outputGrades(neededGradesText)
+                    getGrades(targetAverage, minGrade, sum, gradeCount)
+
+                    outputGrades(neededGradesText)
+                }
             }
         }
     }
