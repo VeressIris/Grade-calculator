@@ -17,18 +17,30 @@ class MainActivity : AppCompatActivity() {
         val calculateButton = findViewById<Button>(R.id.calculateButton)
 
         calculateButton.setOnClickListener {
-            getAverageData(currentGradesText.text.toString())
-
-            val targetAverage = targetAverageText.text.toString().toFloat()
-            neededGrades.clear()
-            getGrades(targetAverage, minGrade, sum, gradeCount)
-
-            var tempStr = ""
-            for (grade in neededGrades) {
-                tempStr += grade.toString() + " "
+            if (!validInput(currentGradesText.text.toString())) {
+                currentGradesText.text = "Please input valid grades!"
             }
-            neededGradesText.text = tempStr
+            else {
+                getAverageData(currentGradesText.text.toString())
+
+                val targetAverage = targetAverageText.text.toString().toFloat() - 0.5f //-0.5 to get the minimum average needed
+                neededGrades.clear() //clear grades array to make sure you can calculate from scratch again
+
+                getGrades(targetAverage, minGrade, sum, gradeCount)
+
+                outputGrades(neededGradesText)
+            }
         }
+    }
+
+    fun validInput(input:String):Boolean{
+        for (i in input.indices){
+            if (!input[i].isDigit() && input[i] != ' '){
+                return false
+            }
+        }
+
+        return true
     }
 
     var sum:Int = 0
@@ -70,4 +82,19 @@ class MainActivity : AppCompatActivity() {
         return null
     }
 
+    val maxGradeAmount = 6
+    fun outputGrades(neededGradesText: TextView): Void?{
+        if (neededGrades.size > maxGradeAmount){
+            neededGradesText.text = "You would need ${neededGrades.size} grades. You cannot get that many this year.\nGood luck next time!"
+        }
+        else{
+            var tempStr = ""
+            for (grade in neededGrades) {
+                tempStr += grade.toString() + " "
+            }
+            neededGradesText.text = tempStr
+        }
+
+        return null
+    }
 }

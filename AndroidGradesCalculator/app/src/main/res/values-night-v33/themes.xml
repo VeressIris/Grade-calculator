@@ -1,16 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
     <style name="Base.Theme.GradesCalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
+        <item name="android:backdropColor">#9e9e9e</item>
         <item name="fontFamily">@font/roboto_medium</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20sp</item>
         <item name="colorPrimary">@color/primary_dark_color</item>
         <item name="materialButtonStyle">@style/ButtonStyleDark</item>
-    </style>
-
-    <style name="ButtonStyleDark" parent="Widget.Material3.Button">
-        <item name="backgroundTint">@color/primary_dark_color</item>
-        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

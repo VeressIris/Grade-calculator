@@ -2,8 +2,17 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.GradesCalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="materialButtonStyle">@style/ButtonStyleLight</item>
+         <item name="colorPrimary">@color/primary_color</item>
     </style>
 
     <style name="Theme.GradesCalculator" parent="Base.Theme.GradesCalculator" />
+
+    <style name="ButtonStyleLight" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary_color</item>
+    </style>
+
 </resources>
