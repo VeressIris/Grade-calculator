@@ -1,0 +1,11 @@
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\bin\Debug\GradeCalcPlusWindows.exe.config
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\bin\Debug\GradeCalcPlusWindows.exe
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\bin\Debug\GradeCalcPlusWindows.pdb
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.csproj.AssemblyReference.cache
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.csproj.SuggestedBindingRedirects.cache
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.Form1.resources
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.Properties.Resources.resources
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.csproj.GenerateResource.cache
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.csproj.CoreCompileInputs.cache
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.exe
+C:\Users\Iris\OneDrive\Documents\Info\Info\11th grade\GradeCalcPlusWindows\GradeCalcPlusWindows\obj\Debug\GradeCalcPlusWindows.pdb
